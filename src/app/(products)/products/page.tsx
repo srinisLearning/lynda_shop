@@ -1,9 +1,11 @@
-import React from 'react'
+import ProductsList from "@/components/ProductList";
+import { products } from '@/utils/data/productData';
 
-const ProductsPage = () => {
+export default function ProductsPage() {
   return (
-    <div>Product List</div>
-  )
+    <div className="container mx-auto p-8"> 
+      <h1 className="text-4xl font-bold mb-8">Products</h1> 
+      <ProductsList products={products} />
+    </div>
+  );
 }
-
-export default ProductsPage
