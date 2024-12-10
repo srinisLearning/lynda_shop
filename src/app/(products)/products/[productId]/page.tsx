@@ -1,11 +1,12 @@
  
+import NotFoundPage from "@/app/not-found";
 import { products } from "@/utils/data/productData";
 
 export default function ProductDetailPage({ params }: { params: { productId: string } }) {
   const product = products.find(p => p.id === Number(params.productId));
 
   if (!product) {
-    return <h3>Product not found</h3>
+    return  <NotFoundPage />;
   }
 
   return (
